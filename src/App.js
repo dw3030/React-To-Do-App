@@ -1,7 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import TodoList from './TodoList.js'
+// import ReactDOM from 'react-dom';
+import TodoList from './TodoList.js';
+import "./styles.css";
 const { v4: uuidv4 } = require('uuid');
 // import uuidv4 from 'uuid/v4'
+
+
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
 
@@ -46,12 +50,17 @@ function App() {
 
   return (
     <>
-      <div>DW's To-do List</div>
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <div className="headline">DW's TO-DO List</div>
+      <hr />
+      
       <input ref={todoNameRef} type="text" onKeyPress="if(event.keyCode == 13){handleAddTodo}"/>
       <button onClick={handleAddTodo}>Add Todo</button>
       <button onClick={handleClearTodos}>Clear Complete</button>
-      <div>{todos.filter(todo => !todo.complete).length} left to do</div>
+      <hr />
+
+      <div className="numLeft">{todos.filter(todo => !todo.complete).length} left! Keep Going!</div>
+
+      <TodoList className="listStyle" todos={todos} toggleTodo={toggleTodo} />
     </>
   )
 }

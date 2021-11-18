@@ -53,9 +53,9 @@ function App() {
       <div className="headline">DW's TO-DO List</div>
       <hr />
       
-      <input ref={todoNameRef} type="text" onKeyPress="if(event.keyCode == 13){handleAddTodo}"/>
-      <button onClick={handleAddTodo}>Add Todo</button>
-      <button onClick={handleClearTodos}>Clear Complete</button>
+        <input ref={todoNameRef} type="text" onKeyPress="if(event.keyCode == 13){handleAddTodo}"/>
+        <button onClick={handleAddTodo}>Add Todo</button>
+        <button onClick={handleClearTodos}>Clear Complete</button>
       <hr />
 
       <div className="numLeft">{todos.filter(todo => !todo.complete).length} left! Keep Going!</div>

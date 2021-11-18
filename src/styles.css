@@ -1,6 +1,5 @@
+/* import Button from 'react-bootstrap/Button'; */
 /* src/styles.css */
-
-
 
 body {
     background-color: aquamarine;
@@ -34,7 +33,7 @@ body {
 }
 
 .listStyle {
-    
+    font-size: 80px;
 }
 
 .numLeft {
